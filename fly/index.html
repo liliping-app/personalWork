@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>远课堂</title>
+	<link rel="stylesheet" href="lib/index.css">
+	<script src="http://g.alicdn.com/alicloud-components/alicloud-1111-game/0.0.2/ysc_csyx/js/zepto.min.js"></script>
+</head>
+<script>
+  var width = $(window).width();
+  var font;
+  if(width>1024){
+    font = 64;
+    $('body').css({'margin': '0 auto','max-width':'640px'});
+  }else{
+    font = 0.1*width;
+  }
+  $('html').css({'font-size': font +'px'});
+  $('body').css({'font-size': font/8*3});
+</script>
+<body>
+	<div class="wrapper"></div>
+</body>
+	<script src="lib/index-es6.js"></script>
+</html>
