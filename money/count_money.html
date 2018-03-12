@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>数钱</title>
+    <link rel="stylesheet" href="css/count_money.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="money">
+        <a href="#" class="btn_game"></a>
+        <a class="voucher" target="_blank">胜券在线 前往用券&nbsp;</a>
+        <p class="provider">本游戏由视界PLUS公司提供</p>
+      </div>
+      <!-- 页面加载 -->
+      <div class="mask_loading"></div>
+      <div class="mask">
+        <div class="mask_top">
+          <img class="head" src="img/head.png" alt="">
+          <p class="slide">向上滑动屏幕</p>
+        </div>
+      </div>
+      <!-- 二级页面 -->
+      <div class="two" id="falling">
+        
+        <!-- <div class="down" ></div> -->
+        <div class="time"><span >时间：<b id="div_countDown">54</b>秒</span></div>
+        <div class="title_page">
+          <img class="title" src="img/title3.png" alt=""/>
+          <p class="dollar_txt">企业上云后市值飙升至<span class="dollar"></span>亿</p>
+        </div>
+        <img src="img/rise.png" class="rise" alt="">
+        <div class="show">
+        <img class="rise" src="img/rise.png" alt=""/>
+        <img class="dowm1" src="img/money.png" alt=""/>
+        <img class="dowm2" src="img/money.png" alt=""/>
+        <img class="dowm3" src="img/money.png" alt=""/>
+        <img class="dowm4" src="img/money.png" alt=""/>
+        <img class="dowm5" src="img/money.png" alt=""/>
+        <img class="dowm6" src="img/money.png" alt=""/>
+        <img class="dowm7" src="img/money.png" alt=""/>
+        <img class="dowm8" src="img/money.png" alt=""/>
+        </div>
+        <div class="list">
+          <img class="list_img" src="img/money.png" alt="">
+          <a href="#" class="more_slide">
+            
+          </a>
+          <img class="finger" src="img/finger.png" alt=""/>
+        </div>
+      </div>
+      <!-- 代金券 -->
+      <div class="cash" id="'slider">
+        <div class="title2_page">
+          <img class="company" src="img/company3.png" alt=""/>
+          <p class="dollar2_txt">哇塞！上云后我们企业市值<br/>飙升至<span class="dollar"></span>亿</p>
+        </div>
+        <div class="yuan_box">
+          <img class="yuan" src="img/yuan2.png" alt=""/>
+          <p class="yuan_num">3000</p>
+        </div>
+        <p class="prosit"><a href="" class="gold1" target="_blank">恭喜你获得“<span class="gold">WDCP V3.2管理面板多版本PHP共存和SSL CentOS6.8</span>”代金券</a><br/><a href="" class="gong1" target="_blank">本产品由云市场服务商“<span class="gong">福州兴奕盛网络科技有限公司</span>”提供</a><br/><span class="use">满200元使用</span></p>
+        <div class="btn">
+          <a href="#" class="share"></a>
+          <a href="#" class="again"></a>
+        </div>
+      </div>
+    </div>
+    <div class="fen">
+      <p class="cancel">X</p>
+    <div class="jiathis_style_m">
+     </div>
+    </div>
+    
+   
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/count_money.js"></script>
+    <!-- JiaThis Button BEGIN -->
+   
+    <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_m.js" charset="utf-8"></script>
+    <!-- JiaThis Button END -->
+    <script>
+    var width = $(window).width();
+    var font;
+    if(width>1024){
+      font = 64;
+      $('body').css({'margin': '0 auto','max-width':'640px'});
+    }else{
+      font = 0.1*width;
+    }
+    $('html').css({'font-size': font +'px'});
+    $('body').css({'font-size': font/8*3});
+  </script>
+  </body>
+</html>
