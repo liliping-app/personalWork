@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>index.html</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <style>
+      html{
+        background:rgb(39, 0, 21);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- <div id="wapBox"></div> -->
+    <!-- built files will be auto injected -->
+    <script src="//g.alicdn.com/mtb/lib-flexible/0.3.2/flexible.js">
+      /* 页面采用rem单位 750分辨率标准  1rem = 37.5px */
+    </script>
+<!--     <script src="//account.youku.com/static-resources/js/loadFrame.js"></script> -->
+    <script src="https://g.alicdn.com/alilog/mlog/aplus_wap.js"></script>
+    <!-- <script>
+      YKLoginLoader.ready(function(){
+        var bind = new YKLoginLoader({
+          loadType: 'bind',
+          buid: 'youku',
+          isMobile: true,
+          isFromSDK: false,
+          pid: '12345678',
+          frameID: 'wapBox',
+          callbackURL: 'https://www.tudou.com',
+          componentDidLoad: function(){
+            bind.initBindComponent(); // 必要
+          },
+          loginSuccess: function(){
+            bindInstance.initBindSuccessView(); // 展示绑定手机成功页面
+          },
+          loadFail: function(){
+            alert('请刷新后重试');
+          }
+        });
+      });
+    </script> -->
+    <!-- 相关配置 -->
+    <script>
+      posterConfig={
+        // 首页样式
+        "indexInfo":{
+          "indexBgColor":"#270015",//首页背景颜色
+          "indexBg":"//gw.alicdn.com/tfs/TB1RXmfbEgQMeJjy0FjXXaExFXa-750-1248.png",//首页背景图
+          "indexPic":"//gw.alicdn.com/tfs/TB1GFSdbwMPMeJjy1XdXXasrXXa-650-952.png",//首页中心图底框
+          "indexHb":"//gw.alicdn.com/tfs/TB1yNWgbwMPMeJjy1XdXXasrXXa-481-485.png",//首页中心图
+          "indexTxt":"每周成绩排名前十，就有神秘大奖哦！",//首页中心图片下方文案
+          "EnterBg":"//gw.alicdn.com/tfs/TB1ZKEUbgMPMeJjy1XdXXasrXXa-468-118.png",//开始闯关按钮图
+          "ruleBtnBg":"//gw.alicdn.com/tfs/TB1M77VbgMPMeJjy1XdXXasrXXa-51-143.png",//活动规则按钮
+          "isRuleOuter":true,//通关必看的链接是否有
+          "ruleLink":"http://v.youku.com/v_show/id_XMzAyOTE3MzgwNA==.html",//通关必看的链接
+          "prizeLink":"https://hudong.vip.youku.com/act/singer1Prize.html",//(奖品配置的链接)
+          "prizeBtnBg":"//gw.alicdn.com/tfs/TB1M77VbgMPMeJjy1XdXXasrXXa-51-143.png",//奖品配置的按钮
+          "isPrizeOuter":false
+
+        },
+        // 游戏玩法
+        "gameInfo":{
+          "guideBg":"//gw.alicdn.com/tfs/TB1Zv1QcwMPMeJjy1XdXXasrXXa-750-1334.png",//游戏玩法背景图
+          "guildTou":"https://gw.alicdn.com/tfs/TB18fZRXaagSKJjy0FhXXcrbFXa-318-133.png",//游戏玩法的头部
+          "guildQuest":"谁的才艺秀是变魔术？",//游戏的玩法的问题
+          "guildEx01":"//gw.alicdn.com/tfs/TB1p8sqcmFRMKJjy0FhXXX.xpXa-238-354.png",//游戏的玩法的实例图片01
+          "guildEx02":"//gw.alicdn.com/tfs/TB1cTvHcwoQMeJjy0FpXXcTxpXa-238-354.png",//游戏的玩法的实例图片02
+          "guildAw01":"吉普赛女郎",//游戏的玩法的答案01,左边是错误的答案
+          "guildAw02":"宝宝翻身把歌唱",//游戏的玩法的答案02，右边是正确的答案
+          "guildDui":"//gw.alicdn.com/tfs/TB1Yb2CcwMPMeJjy1XdXXasrXXa-144-147.png",//答案标记正确
+          "guildDKt":"//gw.alicdn.com/tfs/TB1P1u2cwMPMeJjy1XdXXasrXXa-579-615.png",//游戏玩法的底框图
+          "ruleRTxt":"根据问题从两张图片中快速找出正确答案，点击 相应图片即可进入下一关。周排名前十即可获得 神秘大礼。成绩相同的人，新入榜成绩排在前列。",//游戏玩法说明
+          "ruleRBtnBg":"//gw.alicdn.com/tfs/TB1iYE_bgMPMeJjy1XdXXasrXXa-468-119.png",//游戏玩法按钮
+          "gameBg":"//gw.alicdn.com/tfs/TB1rdeqbwMPMeJjy1XdXXasrXXa-750-1334.png",//游戏页的背景图
+          "gameFrameBg":"//gw.alicdn.com/tfs/TB1E0EVXGagSKJjy0FhXXcrbFXa-743-794.png",//游戏页的底框
+          "countDownBg":"//gw.alicdn.com/tfs/TB1q5SpbEgQMeJjy0FjXXaExFXa-750-2668.png",//游戏过渡图
+          "ReadyBg":"//gw.alicdn.com/tfs/TB1ShIWcogQMeJjy0FfXXbddXXa-750-1205.png",//游戏过渡图Ready
+          "GoBg":"https://gw.alicdn.com/tfs/TB1ez.3cgMPMeJjy1XcXXXpppXa-750-1205.png",//游戏过渡图Go
+          "rightBg":"//gw.alicdn.com/tfs/TB1uHG3bwMPMeJjy1XcXXXpppXa-242-279.png",//正确图
+          "leftBg":"//gw.alicdn.com/tfs/TB1VZiRbwMPMeJjy1XdXXasrXXa-235-279.png",//错误图
+          "limitTime":"180",
+          "minTime":"3",
+          "questionNum":"5",//5个问题
+          "fakeBg":"//gw.alicdn.com/tfs/TB1EaGZcgMPMeJjy1XcXXXpppXa-572-430.png",//外星人图
+        },
+        //游戏问答环节
+        "posterArray":[
+          {
+            "question":"该剧故事背景发生在哪个时期？",
+            "wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png",
+            "right":"//gw.alicdn.com/tfs/TB1me5NbwMPMeJjy1XcXXXpppXa-310-460.png",
+            "wrongTxt":"吉普赛女郎",
+            "rightTxt":"宝宝翻身把歌唱"
+          },
+          {
+          "rightTxt":"殴打教官",
+          "wrongTxt":"集合迟到",
+          "wrong":"//gw.alicdn.com/mt/TB1o9_zSpXXXXa7XVXXXXXXXXXX-320-540.jpg",
+          "question":"小红和秋水为何被罚去帮厨？",
+          "right":"//gw.alicdn.com/mt/TB1qgTWSpXXXXbBXXXXXXXXXXXX-320-540.jpg"
+          },
+          {
+            "question":"该剧故事背景发生在哪个时期？该剧故事背景发生在哪个111",
+            "wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png",
+            "right":"//gw.alicdn.com/tfs/TB1me5NbwMPMeJjy1XcXXXpppXa-310-460.png",
+            "wrongTxt":"吉普赛女郎",
+            "rightTxt":"宝宝翻身把歌唱"
+          },
+          {
+          "rightTxt":"殴打教官",
+          "wrongTxt":"集合迟到",
+          "wrong":"//gw.alicdn.com/mt/TB1o9_zSpXXXXa7XVXXXXXXXXXX-320-540.jpg",
+          "question":"小红和秋水为何被罚去帮厨？66666",
+          "right":"//gw.alicdn.com/mt/TB1qgTWSpXXXXbBXXXXXXXXXXXX-320-540.jpg"
+          },
+          {
+            "question":"该剧故事背景发生在哪个时期？该剧故事背景发生在哪个77777",
+            "wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png",
+            "right":"//gw.alicdn.com/tfs/TB1me5NbwMPMeJjy1XcXXXpppXa-310-460.png",
+            "wrongTxt":"吉普赛女郎",
+            "rightTxt":"宝宝翻身把歌唱"
+          },
+          {
+          "rightTxt":"殴打教官",
+          "wrongTxt":"集合迟到",
+          "wrong":"//gw.alicdn.com/mt/TB1o9_zSpXXXXa7XVXXXXXXXXXX-320-540.jpg",
+          "question":"小红和秋水为何被罚去帮厨？",
+          "right":"//gw.alicdn.com/mt/TB1qgTWSpXXXXbBXXXXXXXXXXXX-320-540.jpg"
+          },
+          {
+            "question":"该剧故事背景发生在哪个时期？该剧故事背景发生在哪个",
+            "wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png",
+            "right":"//gw.alicdn.com/tfs/TB1me5NbwMPMeJjy1XcXXXpppXa-310-460.png",
+            "wrongTxt":"吉普赛女郎",
+            "rightTxt":"宝宝翻身把歌唱"
+          },
+          {
+          "rightTxt":"殴打教官",
+          "wrongTxt":"集合迟到",
+          "wrong":"//gw.alicdn.com/mt/TB1o9_zSpXXXXa7XVXXXXXXXXXX-320-540.jpg",
+          "question":"小红和秋水为何被罚去帮厨？",
+          "right":"//gw.alicdn.com/mt/TB1qgTWSpXXXXbBXXXXXXXXXXXX-320-540.jpg"
+          }
+        ],
+        // 活动分享
+        "activityInfo":{
+          "datiMin": 2,//答题次数
+          "datiBol": true,//每日答题是否受限
+          "shareBol": true,//分享是否有效
+          "shareMin": 2,//分享次数
+          "fxalertBg": "//gw.alicdn.com/tfs/TB1ZA5BcgMPMeJjy1XdXXasrXXa-558-427.png",//点击分享出来弹框
+          "tkAlert":"分享后可继续答题，你将再有一次答题机会。",//弹框（分享后文案）
+          "tkAlert3":"你已经没有机会了",//弹框文案
+          "rankActivity": "cfsl-vip",//排行榜接口所需的活动标识
+          "rankSubType": "card-game",//排行榜接口所需的子活动标识
+          "appKey": "23774304",//必须
+          "rankSum": 10,//获取前几个人
+        },
+        // 手机分享配置
+        "shareInfo":{
+          "FxUrl":"//youku.com",//分享链接
+          "FxImg":"https://gw.alicdn.com/tfs/TB11t4tcgoQMeJjy0FpXXcTxpXa-750-466.png",
+          "FxTitle":"分享到朋友圈",
+          "FxDesc":"你已经分享成功了，可以再来一局。"
+        },
+        // 失败样式
+        "resultInfo":{
+          "finalBgColor": "#340015",//失败页的背景颜色
+          "failBg":"https://gw.alicdn.com/tfs/TB1Hb2tbwMPMeJjy1XcXXXpppXa-750-2451.png",//失败页的背景图
+          "failWenTu":"https://gw.alicdn.com/tfs/TB1gnLibwMPMeJjy1XdXXasrXXa-297-161.png",//失败的图
+          "failTbk":"//gw.alicdn.com/tfs/TB15enkbwMPMeJjy1XdXXasrXXa-664-291.png",//通关必看底框
+          "succwenan": "击败了$的蒙面发烧友",
+          //百分比的文案,$必写
+          "color": "#fe7b33",//闯关必看的颜色
+          "bikanTxt":"闯关必看",//闯关必看的文案
+          "bikanImg":"//gw.alicdn.com/tfs/TB1T4rzbwMPMeJjy1XcXXXpppXa-34-34.png",//闯关必看的小图标
+          "fenX":"//gw.alicdn.com/tfs/TB1q_vobwMPMeJjy1XdXXasrXXa-468-119.png",//分享图片按钮
+           "fenX2":"//gw.alicdn.com/tfs/TB1KgZSXaagSKJjy0FgXXcRqFXa-468-119.png",//分享图片PK按钮
+          "shousu":"//gw.alicdn.com/tfs/TB10yzBbwMPMeJjy1XbXXcwxVXa-323-124.png",//手速的图片
+          "zuiCj":"//gw.alicdn.com/tfs/TB1B6jBbwMPMeJjy1XcXXXpppXa-662-76.png",//最好成绩的底框
+          "lieBg":"//gw.alicdn.com/tfs/TB1u5vxbwMPMeJjy1XdXXasrXXa-662-120.png",//列表(名次，头像，成绩)的背景图
+          "touBg":"//gw.alicdn.com/tfs/TB1e9YybwMPMeJjy1XdXXasrXXa-90-90.png",//头像背景图
+          "succBgColor":"#340015",//成功页的背景颜色
+          "succBg":"//gw.alicdn.com/tfs/TB1poj.b3oQMeJjy0FpXXcTxpXa-750-1547.png",//成功页的背景图
+          "succBgTop":"//gw.alicdn.com/tfs/TB1oY.cb3MPMeJjy1XbXXcwxVXa-750-522.png",//成功页的头部
+          "succTu":"//gw.alicdn.com/tfs/TB1JidabEtWMKJjy0FaXXcCDpXa-278-169.png",//通关图片
+          "succdik":"//gw.alicdn.com/tfs/TB1K7MybwoQMeJjy0FnXXb8gFXa-664-515.png",//底框背景图
+          "succdik2":"//gw.alicdn.com/tfs/TB1nwxDb.gQMeJjy0FiXXXhqXXa-664-429.png",//底框表单背景图
+          "formMd":"风一样的手速，恭喜进入前十名！",//表单的文案（进入前十名的文案）
+          "formTj":"//gw.alicdn.com/tfs/TB1Nmh2b3MPMeJjy1XcXXXpppXa-161-70.png",//提交按钮图片
+          "formLx":"如您最终获得周榜前十将有工作人员联系您",//工作人员联系您
+          "goodBg":"//gw.alicdn.com/tfs/TB16fRzbCRRMKJjy0FlXXXFepXa-662-76.png",//最好成绩的底框
+          "rank01":"//gw.alicdn.com/tfs/TB1UrQKbwMPMeJjy1XdXXasrXXa-48-60.png",//第1名的背景图片
+          "rank02":"//gw.alicdn.com/tfs/TB1HKQHbCFRMKJjy0FhXXX.xpXa-48-60.png",//第2名的背景图片
+          "rank03":"//gw.alicdn.com/tfs/TB1IhfRbUgQMeJjy0FjXXaExFXa-48-60.png",//第3名的背景图片      
+          "bangdan":"榜单每周日15点截止，最终排名前十的用户才能获奖哦。 成绩相同的用户，名次按入榜时间排序。",   
+        },
+        "canTime":"2017-09-10 15:00:00",//参考时间的周日
+        "canTimeBol":true,//是否设置参考时间
+        "BtnBol":true,//是否显示清楚按钮
+        //黄金令箭的埋点
+        "logInfo":{
+          "startLog":"/yt/mmcjss.H5.kscg_btn','CLK','','H1478724941",
+          "ruleLog":"/yt/mmcjss.H5.ysrk_btn','CLK','','H1478724941",
+          "guideLog":"/yt/mmcjss.H5.zbhl','CLK','','H1455636893",
+          "failLog":"/yt/mmcjss.H5.sbywzrk','CLK','','H1477801396",
+          "shareLog":"'/yt/mmcjss.H5.fxzlyj_btn','CLK','','H1480571983'",
+          "saveLog":"/yt/mmcjss.H5.sjtj_btn','CLK','','H1478724941",
+          "succLog":"/yt/mmcjss.H5.tg_bg','CLK','','H1456560409",//游戏通关
+          "shibaiLog":"/yt/mmcjss.H5.sb_bg','CLK','','H1456560409",//失败页曝光
+          "startyLog":"/yt/mmcjss.H5.yxks','CLK','','H1455636921",//游戏开始
+          "tongLog":"goldlog.record('/yt/mmcjss.H5.tg_bg','CLK','','H1456560409'",//通关页曝光
+            "shibaiLog":"/yt/mmcjss.H5.sb_bg','CLK','','H1456560409",//失败页的曝光
+            "finishLog":"/yt/mmcjss.H5.yxwc','CLK','','H46956284",//完成页
+            "gamewfLog":"/yt/mmcjss.H5.wf_bg','CLK','','H1456560409"//游戏玩法页
+        }
+      }
+    </script>
+    <script>
+      posterConfig={"posterConfig":{"canTime":"2017-09-10 15:00:00","canTimeBol":true,"BtnBol":true,"posterArray":[{"rightTxt":"宝宝翻身把歌唱","wrongTxt":"吉普赛女郎","wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png","question":"该剧故事背景发生在哪个时期？","right":"//gw.alicdn.com/tfs/TB1me5NbwMPMeJjy1XcXXXpppXa-310-460.png"},{"rightTxt":"殴打教官","wrongTxt":"集合迟到","wrong":"//gw.alicdn.com/mt/TB1o9_zSpXXXXa7XVXXXXXXXXXX-320-540.jpg","question":"小红和秋水为何被罚去帮厨？","right":"//gw.alicdn.com/mt/TB1qgTWSpXXXXbBXXXXXXXXXXXX-320-540.jpg"},{"rightTxt":"宝宝翻身把歌唱","wrongTxt":"吉普赛女郎","wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png","question":"该剧故事背景发生在哪个时期？该剧故事背景发生在哪个111","right":"//gw.alicdn.com/tfs/TB1me5NbwMPMeJjy1XcXXXpppXa-310-460.png"},{"rightTxt":"殴打教官","wrongTxt":"集合迟到","wrong":"//gw.alicdn.com/mt/TB1o9_zSpXXXXa7XVXXXXXXXXXX-320-540.jpg","question":"小红和秋水为何被罚去帮厨？","right":"//gw.alicdn.com/mt/TB1qgTWSpXXXXbBXXXXXXXXXXXX-320-540.jpg"},{"rightTxt":"宝宝翻身把歌唱","wrongTxt":"吉普赛女郎","wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png","question":"该剧故事背景发生在哪个时期？该剧故事背景发生在哪个111","right":"//gw.alicdn.com/tfs/TB1me5NbwMPMeJjy1XcXXXpppXa-310-460.png"},{"rightTxt":"正确","wrongTxt":"错误","wrong":"//gw.alicdn.com/tfs/TB1qLSCbwMPMeJjy1XdXXasrXXa-310-460.png","question":"问题1","right":"//gw.alicdn.com/mt/TB1qgTWSpXXXXbBXXXXXXXXXXXX-320-540.jpg"}],"activityInfo":{"rankSubType":"card-game","fxalertBg":"//gw.alicdn.com/tfs/TB1ZA5BcgMPMeJjy1XdXXasrXXa-558-427.png","tkAlert3":"今日答题次数用完，明天继续哦！","tkAlert":"分享后可继续答题，你将再有一次答题机会。","shareMin":"1","rankSum":"10","datiBol":false,"shareBol":true,"rankActivity":"cfsl-vip","appKey":"23774304","datiMin":"1"},"logInfo":{"failLog":"/yt/mmcjss.H5.fxzlyj_btn','CLK','','H1480571983","saveLog":"/yt/mmcjss.H5.sjtj_btn','CLK','','H1478724941","ruleLog":"/yt/mmcjss.H5.ysrk_btn','CLK','','H1478724941","startLog":"/yt/mmcjss.H5.kscg_btn','CLK','','H1478724941","guideLog":"/yt/mmcjss.H5.zbhl','CLK','','H1455636893","shareLog":"/yt/mmcjss.H5.sbywzrk','CLK','','H1477801396","succLog":"/yt/mmcjss.H5.tg_bg','CLK','','H1456560409","shibaiLog":"/yt/mmcjss.H5.sb_bg','CLK','','H1456560409","startyLog":"/yt/mmcjss.H5.yxks','CLK','','H1455636921","tongLog":"goldlog.record('/yt/mmcjss.H5.tg_bg','CLK','','H1456560409'","finishLog":"/yt/mmcjss.H5.yxwc','CLK','','H46956284","gamewfLog":"/yt/mmcjss.H5.wf_bg','CLK','','H1456560409"},"indexInfo":{"prizeLink":"https://hudong.vip.youku.com/act/singer1Prize.html","prizeBtnBg":"//gw.alicdn.com/tfs/TB1M77VbgMPMeJjy1XdXXasrXXa-51-143.png","isPrizeOuter":false,"isRuleOuter":true,"indexBgColor":"#270015","indexPic":"//gw.alicdn.com/tfs/TB1GFSdbwMPMeJjy1XdXXasrXXa-650-952.png","EnterBg":"//gw.alicdn.com/tfs/TB1ZKEUbgMPMeJjy1XdXXasrXXa-468-118.png","indexHb":"//gw.alicdn.com/tfs/TB1yNWgbwMPMeJjy1XdXXasrXXa-481-485.png","indexTxt":"每周成绩排名前十，就有神秘大奖哦！","ruleLink":"http://v.youku.com/v_show/id_XMzAyOTE3MzgwNA==.html","ruleBtnBg":"//gw.alicdn.com/tfs/TB1M77VbgMPMeJjy1XdXXasrXXa-51-143.png","indexBg":"//gw.alicdn.com/tfs/TB1RXmfbEgQMeJjy0FjXXaExFXa-750-1248.png"},"shareInfo":{"FxImg":"//gw.alicdn.com/tfs/TB11t4tcgoQMeJjy0FpXXcTxpXa-750-466.png","FxTitle":"分享到朋友圈","FxUrl":"http://www.youku.com/","FxDesc":"你已经分享成功了，可以再来一局。"},"resultInfo":{"bangdan":"榜单每周日15点截止，最终排名前十的用户才能获奖哦。 成绩相同的用户，名次按入榜时间排序。","formLx":"如您最终获得周榜前十将有工作人员联系您","lieBg":"//gw.alicdn.com/tfs/TB1u5vxbwMPMeJjy1XdXXasrXXa-662-120.png","goodBg":"//gw.alicdn.com/tfs/TB16fRzbCRRMKJjy0FlXXXFepXa-662-76.png","formMd":"风一样的手速，恭喜进入前十名！","succTu":"//gw.alicdn.com/tfs/TB1JidabEtWMKJjy0FaXXcCDpXa-278-169.png","succBgTop":"//gw.alicdn.com/tfs/TB1oY.cb3MPMeJjy1XbXXcwxVXa-750-522.png","fenX":"//gw.alicdn.com/tfs/TB1q_vobwMPMeJjy1XdXXasrXXa-468-119.png","succdik2":"//gw.alicdn.com/tfs/TB1nwxDb.gQMeJjy0FiXXXhqXXa-664-429.png","rank03":"//gw.alicdn.com/tfs/TB1IhfRbUgQMeJjy0FjXXaExFXa-48-60.png","rank02":"//gw.alicdn.com/tfs/TB1HKQHbCFRMKJjy0FhXXX.xpXa-48-60.png","rank01":"//gw.alicdn.com/tfs/TB1UrQKbwMPMeJjy1XdXXasrXXa-48-60.png","failTbk":"//gw.alicdn.com/tfs/TB15enkbwMPMeJjy1XdXXasrXXa-664-291.png","formTj":"//gw.alicdn.com/tfs/TB1Nmh2b3MPMeJjy1XcXXXpppXa-161-70.png","zuiCj":"//gw.alicdn.com/tfs/TB1B6jBbwMPMeJjy1XcXXXpppXa-662-76.png","succBg":"//gw.alicdn.com/tfs/TB1L7RZfgMPMeJjy1XdXXasrXXa-750-1303.png","bikanTxt":"闯关必看","succwenan":"击败了$的蒙面发烧友","failWenTu":"//gw.alicdn.com/tfs/TB1gnLibwMPMeJjy1XdXXasrXXa-297-161.png","failBg":"//gw.alicdn.com/tfs/TB1L7RZfgMPMeJjy1XdXXasrXXa-750-1303.png","color":"#fe7b33","bikanImg":"//gw.alicdn.com/tfs/TB1T4rzbwMPMeJjy1XcXXXpppXa-34-34.png","shousu":"//gw.alicdn.com/tfs/TB10yzBbwMPMeJjy1XbXXcwxVXa-323-124.png","finalBgColor":"#340015","succdik":"//gw.alicdn.com/tfs/TB1K7MybwoQMeJjy0FnXXb8gFXa-664-515.png","fenX2":"//gw.alicdn.com/mt/TB1nXebdDZRMeJjSspkXXXGpXXa-468-119.png","touBg":"//gw.alicdn.com/tfs/TB1e9YybwMPMeJjy1XdXXasrXXa-90-90.png","succBgColor":"#340015"},"gameInfo":{"minTime":"3","ruleRBtnBg":"//gw.alicdn.com/tfs/TB1iYE_bgMPMeJjy1XdXXasrXXa-468-119.png","guildEx01":"//gw.alicdn.com/tfs/TB1p8sqcmFRMKJjy0FhXXX.xpXa-238-354.png","guildAw02":"宝宝翻身把歌唱","guildAw01":"吉普赛女郎","guildDui":"//gw.alicdn.com/tfs/TB1Yb2CcwMPMeJjy1XdXXasrXXa-144-147.png","ReadyBg":"//gw.alicdn.com/tfs/TB1ShIWcogQMeJjy0FfXXbddXXa-750-1205.png","guildTou":"//gw.alicdn.com/mt/TB1CjB_drsTMeJjy1zbXXchlVXa-318-133.png","guildEx02":"//gw.alicdn.com/tfs/TB1cTvHcwoQMeJjy0FpXXcTxpXa-238-354.png","rightBg":"//gw.alicdn.com/tfs/TB1uHG3bwMPMeJjy1XcXXXpppXa-242-279.png","fakeBg":"//gw.alicdn.com/tfs/TB1EaGZcgMPMeJjy1XcXXXpppXa-572-430.png","leftBg":"//gw.alicdn.com/tfs/TB1VZiRbwMPMeJjy1XdXXasrXXa-235-279.png","guildDKt":"//gw.alicdn.com/tfs/TB1P1u2cwMPMeJjy1XdXXasrXXa-579-615.png","gameFrameBg":"//gw.alicdn.com/tfs/TB1E0EVXGagSKJjy0FhXXcrbFXa-743-794.png","questionNum":"5","ruleRTxt":"根据问题从两张图片中快速找出正确答案，点击 相应图片即可进入下一关。周排名前十即可获得 神秘大礼。成绩相同的人，新入榜成绩排在前列。","guideBg":"//gw.alicdn.com/tfs/TB1Zv1QcwMPMeJjy1XdXXasrXXa-750-1334.png","gameBg":"//gw.alicdn.com/tfs/TB1rdeqbwMPMeJjy1XdXXasrXXa-750-1334.png","limitTime":"180","guildQuest":"谁的才艺秀是变魔术？","GoBg":"//gw.alicdn.com/tfs/TB1ez.3cgMPMeJjy1XcXXXpppXa-750-1205.png"}}}
+    </script>
+    <script data-mt-variable="posterConfig"></script>
+    <!--分享提示层-->
+    <script>
+      posterConfig = posterConfig.posterConfig;
+    </script>
+    <!-- <script src="//g.alicdn.com/mtb/lib-windvane/2.1.8/windvane.js"></script> -->
+    <script src="//account.youku.com/static-resources/js/loadFrame.js"></script>
+    <script src="https://gw.alicdn.com/bao/uploaded/TB1D9fzQFXXXXbUaXXXXXXXXXXX.js"></script>
+    <script>
+    //分享配置
+      /*window.ShareConfig = {
+            title: Math.random() > 0.5 ? '今日宜手快,忌犹豫,优酷会员疯抢ing!' : '海报老司机,狂飙拼手速!通关100%领优酷会员!',
+            desc: '猜海报,拼手速,优酷会员疯狂领,等你来PK!',
+            url: 'https://svip.youku.com/poster/index?screen=phone',
+            imgurl: 'https://r1.ykimg.com/051000005857B02067BC3D52C103FE4C'
+        };
+        var oImg = new Image();
+        oImg.src = ShareConfig.imgurl;
+
+      //app分享传参
+      window.getMoreInfo = function(){
+        return {  
+          show:'yes',
+          otherinfo: {
+            title: ShareConfig.title,
+            url: ShareConfig.url,
+            imageurl: ShareConfig.imgurl
+          }
+        }
+      };
+      //微信分享
+      var WeixinShareReady = function() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+          WeixinJSBridge.invoke('sendAppMessage', {
+            'img_url': ShareConfig.imgurl,
+            'link': ShareConfig.url,
+            'desc': ShareConfig.desc,
+            'title': ShareConfig.title
+          }, function(res) {
+            // _report('send_msg', res.err_msg);
+          });
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+          WeixinJSBridge.invoke('shareTimeline', {
+            'img_url': ShareConfig.imgurl,
+            'link': ShareConfig.url,
+            'desc': ShareConfig.desc,
+            'title': ShareConfig.title
+          }, function(res) {
+            // _report('timeline', res.err_msg);
+          });
+        });
+      };
+      if (window.WeixinJSBridge && window.WeixinJSBridge.on && window.WeixinJSBridge.invoke) {
+        WeixinShareReady();
+      } else {
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+          WeixinShareReady();
+        }, false);
+      }*/
+    </script>
+  </body>
+</html>
